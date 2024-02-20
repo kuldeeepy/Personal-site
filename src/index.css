@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --family-one: cursive;
+    --family-two: 'opensans-semibold';
+    --family-three: 'opensans-light';
+    --family-four: monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #16181d;
+    overflow-x: hidden;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+ul li {
+    letter-spacing: 1.5px;
+    font-family: 'opensans-bold', sans-serif;
+}
+
+.name {
+    font-size: 4rem;
+    font-family: cursive;
+}
+
+span {
+    font-size: 15px;
+    font-family: monospace;
+}
+p {
+    font-size: 13px;
+    font-family: var(--family-one);
+}
+.banner {
+    position: relative;
+    height: 800px;
+    min-height: 100vh;
+    width: 100%;
+    background: #161415 url("/src/assets/theBg.jpg") no-repeat top center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    text-align: center;
+}
+
+.container ul li {
+    border: 2px solid #e0e1e5;
+    padding: 2rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.container ul li i {
+    font-size: 50px;
+}
+
+.list img {
+    width: 225px;
+}
+
+.location,
+.mail,
+.phone {
+    font-family: var(--family-one);
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.foo i {
+    font-size: 15px;
+    padding: 1rem;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background: rgb(191 219 254 / .5);
+    border-radius: 50%;
+}
+
+em{
+    font-weight: 600;
+    color: #fef5fae2;
+}
+
+#hamBurger {
+    display: none;
+}
+
+.foo i:hover {
+    background: #191b21;
+    color: rgb(191 219 254 /0.7);
+}
+.foo h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.foo p {
+    font-family: var(--family-one);
+    font-size: 14px;
+    opacity: .89;
+    color: rgb(0 0 0 /0.9);
+}
+
+@media screen and (max-width: 640px) {
+
+    .options {
+        position: sticky;
+        top: 10px;
+        z-index: 10;
+    }
+
+    .options, #hamBurger {
+        display: flex;
+        font-size: 1.50em;
+        margin-right: .7em;
+        justify-content: end;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #hamBurger:hover {
+        font-size: 1.35;
+    }
+
+    #hamBurger:active {
+        .options {
+            height: 100px;
+            background-color: white;
+        }
+    }
+}
